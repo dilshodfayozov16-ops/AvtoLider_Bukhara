@@ -1,0 +1,123 @@
+/* =========================================================
+   MOBILE.CSS — адаптация сайта AvtoLider под телефоны
+   Подключать ПОСЛЕ style.css:
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="mobile.css">
+   ========================================================= */
+
+/* ---------- планшеты / средние экраны ---------- */
+@media (max-width: 900px){
+  section{ padding:48px 0; }
+  .wrap{ padding:0 18px; }
+
+  .hero{ padding-top:76px; padding-bottom:44px; }
+  h1{ font-size:clamp(30px, 8vw, 44px); }
+  .hero-sub{ font-size:15px; max-width:none; }
+  .hero-cta{ gap:10px; }
+  .btn{ padding:13px 20px; font-size:13px; flex:1 1 auto; justify-content:center; }
+
+  .vin-card{ padding:20px; }
+  .vin-card::before{ font-size:9px; top:12px; right:14px; }
+}
+
+/* ---------- телефоны ---------- */
+@media (max-width: 640px){
+
+  /* --- header --- */
+  .header-inner{ padding:12px 14px; gap:8px; }
+  .logo{ font-size:17px; }
+  .header-phone{ display:none; } /* номер телефона переезжает в блок "Контакты" — в шапке не помещается */
+  .btn-login{ padding:8px 12px; font-size:12.5px; }
+  .login-sub{ font-size:9px; }
+  .cart-btn{ width:36px; height:36px; }
+  .burger{ padding:7px 9px; font-size:17px; }
+
+  /* --- hero --- */
+  .hero{ padding-top:64px; padding-bottom:36px; }
+  .eyebrow{ font-size:10.5px; padding:5px 10px; margin-bottom:16px; }
+  h1{ font-size:clamp(28px, 9vw, 38px); }
+  .hero-sub{ font-size:14px; margin-top:14px; }
+  .hero-cta{ margin-top:24px; }
+  .hero-cta .btn{ width:100%; }
+
+  .vin-card{ padding:18px; }
+  .vin-row{ font-size:13px; padding:9px 0; }
+
+  /* --- brands marquee --- */
+  .brand-chip{ font-size:16px; padding:18px 26px; }
+
+  /* --- section headings --- */
+  .section-head{ margin-bottom:26px; gap:14px; }
+  .section-head h2{ font-size:22px; }
+  .section-head p{ max-width:none; font-size:13px; }
+  .num-label{ font-size:11px; margin-bottom:6px; }
+
+  /* --- catalog: brand tabs --- */
+  .brand-tabs{ flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; gap:6px; margin-bottom:22px; padding-bottom:4px; }
+  .brand-tabs::-webkit-scrollbar{ display:none; }
+  .brand-tab{ flex:0 0 auto; padding:9px 14px; font-size:12px; }
+
+  /* --- product grid --- */
+  .product-grid{ grid-template-columns:repeat(2,1fr); }
+  .product-card{ padding:12px; }
+  .product-card h4{ font-size:12px; min-height:auto; margin-bottom:4px; }
+  .product-part{ font-size:9.5px; margin-bottom:8px; }
+  .product-price{ font-size:12.5px; }
+  .add-cart-btn{ width:30px; height:30px; }
+  .cat-tag{ font-size:8.5px; padding:2px 5px; }
+
+  .load-more-btn{ width:100%; padding:12px; }
+
+  /* --- category grids --- */
+  .cat-grid{ grid-template-columns:1fr; }
+  .cat-group-label{ font-size:15px; }
+
+  /* --- advantages --- */
+  .adv-grid{ grid-template-columns:1fr; gap:20px; }
+  .adv-item .big{ font-size:32px; }
+
+  /* --- contact / order form --- */
+  .contact-grid{ gap:32px; }
+  .phone-list a{ font-size:14px; padding:12px 14px; }
+  .phone-list a .tag{ font-size:9.5px; }
+  form{ gap:11px; }
+  .field input, .field select, .field textarea{ padding:11px 12px; font-size:13.5px; }
+
+  footer{ padding:22px 0; }
+  .footer-inner{ font-size:11.5px; flex-direction:column; align-items:flex-start; gap:6px; }
+
+  /* --- login / checkout / profile modals --- */
+  .modal-overlay{ padding:12px; align-items:flex-end; }
+  .modal-card{ max-width:none; border-radius:16px 16px 0 0; }
+  .modal-inner{ padding:26px 20px 22px; }
+  .modal-title{ font-size:21px; }
+  .modal-sub{ font-size:12.5px; margin-bottom:20px; }
+  .otp-row{ gap:8px; }
+  .otp-digit{ font-size:18px; border-radius:8px; }
+  .modal-btn{ padding:13px; font-size:13.5px; }
+
+  /* --- cart drawer full width on phones --- */
+  .cart-panel{ max-width:100%; }
+  .cart-head{ padding:16px 18px; }
+  .cart-items{ padding:10px 18px; }
+  .cart-foot{ padding:14px 18px 18px; }
+  .cart-item-thumb{ width:48px; height:48px; }
+  .cart-item-info h5{ font-size:12px; }
+
+  /* --- product detail modal --- */
+  #productOverlay .modal-card{ max-width:none; }
+  .pm-price{ font-size:20px; }
+
+  /* --- toasts: full width, no overlap with narrow screens --- */
+  .toast-container{ left:12px; right:12px; top:12px; }
+  .toast{ max-width:none; width:100%; }
+}
+
+/* ---------- очень маленькие экраны ---------- */
+@media (max-width: 380px){
+  .logo{ font-size:15px; }
+  .btn-login .login-main{ font-size:11.5px; }
+  h1{ font-size:26px; }
+  .product-grid{ grid-template-columns:1fr; }
+  .otp-digit{ font-size:16px; }
+}
