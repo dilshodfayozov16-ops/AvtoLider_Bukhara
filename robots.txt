@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avtoliderbukhara.netlify.app/sitemap.xml
